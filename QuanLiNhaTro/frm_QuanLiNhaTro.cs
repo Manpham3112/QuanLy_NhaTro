@@ -34,7 +34,7 @@ namespace QuanLiNhaTro
         private void imns_dangxuat_Click(object sender, EventArgs e)
         {
             DialogResult r;
-            r = MessageBox.Show("Bạn muốn đăng xuất ra khỏi tài khoản này?","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+            r = MessageBox.Show("Bạn muốn đăng xuất ra khỏi tài khoản này?","Thông báo test",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
             //if(r==DialogResult.Cancel)
                 
                 
