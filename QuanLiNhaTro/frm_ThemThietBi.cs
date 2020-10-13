@@ -26,6 +26,7 @@ namespace QuanLiNhaTro
         {
             var db = kn.connosql;
             var collection = db.GetCollection<TB>("THIETBI");
+            var collection2 = db.GetCollection<TB>("THIETBI2");
             var query = collection.AsQueryable<TB>().ToList();
             dtgv_thietbi.Rows.Clear();
             foreach (var query1 in query)
