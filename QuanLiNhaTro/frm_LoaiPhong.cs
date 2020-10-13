@@ -28,6 +28,8 @@ namespace QuanLiNhaTro
         {
             var db = kn.connosql;
             var collection = db.GetCollection<BsonDocument>("LOAIPHONG");
+            var collection1 = db.GetCollection<BsonDocument>("LOAIPHONG1");
+            var collection2 = db.GetCollection<BsonDocument>("LOAIPHONG2");
             var query = collection.AsQueryable<BsonDocument>().ToList();
             dtgv_ph.Rows.Clear();
             foreach (var query1 in query)
