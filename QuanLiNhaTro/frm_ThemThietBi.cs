@@ -25,7 +25,7 @@ namespace QuanLiNhaTro
         void load_grid()
         {
             var db = kn.connosql;
-            var collection = db.GetCollection<TB>("TRANGTHIETBI");
+            var collection = db.GetCollection<TB>("TBI");
             var query = collection.AsQueryable<TB>().ToList();
             dtgv_thietbi.Rows.Clear();
             foreach (var query1 in query)
@@ -35,9 +35,7 @@ namespace QuanLiNhaTro
                 tb.MaTB = query1.MaTB;
                 tb.TenTB = query1.TenTB;
                 dtgv_thietbi.Rows.Add(query1.id, query1.MaTB, query1.TenTB);
-
             }
-        }
         }
         private void frm_ThemThietBi_Load(object sender, EventArgs e)
         {
@@ -87,7 +85,7 @@ namespace QuanLiNhaTro
             try
             {
                 var db = kn.connosql;
-                var collection = db.GetCollection<BsonDocument>("THIETBIiiiiiiiii");
+                var collection = db.GetCollection<BsonDocument>("THIETBI");
                 if (txt_mathietbi.Enabled == false)// update docment
                 {
                     DialogResult r;
