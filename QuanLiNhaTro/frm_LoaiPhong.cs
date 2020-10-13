@@ -27,7 +27,7 @@ namespace QuanLiNhaTro
         void load_grid()
         {
             var db = kn.connosql;
-            var collection = db.GetCollection<BsonDocument>("LOAIPHONGgggggg");
+            var collection = db.GetCollection<BsonDocument>("LOAIPHONGG");
             var query = collection.AsQueryable<BsonDocument>().ToList();
             dtgv_ph.Rows.Clear();
             foreach (var query1 in query)
