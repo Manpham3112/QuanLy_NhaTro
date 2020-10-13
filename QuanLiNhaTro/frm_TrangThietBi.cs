@@ -39,7 +39,7 @@ namespace QuanLiNhaTro
             //dtgv_thietbi.DataSource = ds.Tables["ThietBi"];
             //Databingding(ds.Tables["LoaiDV"]);
             var db = kn.connosql;
-            var collection = db.GetCollection<SDTB>("SDggg_THIETBII");
+            var collection = db.GetCollection<SDTB>("SDgggqqqqqq_THIETBII");
             var query = collection.AsQueryable<SDTB>().ToList();
             dtgv_thietbi.Rows.Clear();
             foreach (var query1 in query)
