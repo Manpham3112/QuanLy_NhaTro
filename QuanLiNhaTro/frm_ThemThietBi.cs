@@ -24,11 +24,18 @@ namespace QuanLiNhaTro
         }
         void load_grid()
         {
-            btn_luu.Enabled = false;
-            btn_sua.Enabled = false;
-            btn_xoa.Enabled = false;
-            txt_mathietbi.Enabled = false;
-            txt_tenthietbi.Enabled = false;
+            var db = kn.connosql;
+            var collection = db.GetCollection<TB>("TB");
+            var query = collection.AsQueryable<TB>().ToList();
+            dtgv_thietbi.Rows.Clear();
+            foreach (var query1 in query)
+            {
+                TB tb = new TB();
+                tb.id = query1.id;
+                tb.MaTB = query1.MaTB;
+                tb.TenTB = query1.TenTB;
+                dtgv_thietbi.Rows.Add(query1.id, query1.MaTB, query1.TenTB);
+            }
         }
         private void frm_ThemThietBi_Load(object sender, EventArgs e)
         {
